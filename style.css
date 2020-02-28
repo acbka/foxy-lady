@@ -16,6 +16,21 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
 nav {
   background: #504a4c;
   padding: 30px;
@@ -24,6 +39,104 @@ nav {
 
 .item {
   padding: 20px;
+}
+
+.slider {
+  position: relative;
+}
+
+.slide {
+  background: url(./img/slide1.png) no-repeat top center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px;
+}
+
+.subtitle {
+  font-size: 2rem;
+}
+
+.left {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 30px;
+  top: calc(50% - 15px);
+}
+
+.right {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 30px;
+  top: calc(50% - 15px);
+}
+
+.picture {
+  width: 100%;
+  height: auto;
+}
+
+.classes {
+  padding: 50px;
+}
+.classes h2 {
+  text-align: center;
+}
+
+.classes-sub {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.classes-wrap {
+  display: flex;
+}
+
+.classes-block {
+  margin: 30px 20px;
+}
+
+.description {
+  line-height: 1.55;
+}
+
+.video-block {
+  display: flex;
+  padding: 0 50px;
+}
+
+.video-left {
+  flex-grow: 1;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+
+.video-right {
+  flex-grow: 1;
+  margin-top: 40px;
+}
+
+.found {
+  padding: 50px;
+}
+.found h2 {
+  text-align: center;
+}
+
+.found-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.found-block {
+  padding: 30px;
+}
+
+.found-img {
+  width: 64px;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
