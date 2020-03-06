@@ -9,17 +9,24 @@
    <title>Foxy Lady</title>
 </head>
 <body>
-   <header>
+   <header id="home">
       <nav>
          <div class="logo"><img class="picture" src="./img/logo.png" alt=""></div>
          <div class="menu">
-            <a href="" class="item">О нас</a>
-            <a href="" class="item">Направления</a>
-            <a href="" class="item">Расписание</a>
-            <a href="" class="item">Сервис</a> 
-            <a href="" class="item">Цены</a>
-            <a href="" class="item">FAQ</a>
-            <a href="" class="item">Контакты</a>
+            <a href="#home" class="item active">О нас</a>
+            <a href="#classes" class="item">Направления</a>
+            <a href="#services" class="item">Сервис</a> 
+            <a href="#timetable" class="item">Расписание</a>
+            <a href="#subscription" class="item">Цены</a>
+            <a href="#faq" class="item">FAQ</a>
+            <a href="#contacts" class="item">Контакты</a>
+         </div>
+         <div class="burger toggle">
+            <div class="burger-container">
+               <span class="bar"></span>
+               <span class="bar"></span>
+               <span class="bar"></span>
+            </div>
          </div>
       </nav>
       <div class="slider">
@@ -38,7 +45,7 @@
          </div>
       </div>
    </header>
-   <div class="classes wrap">
+   <div class="classes wrap" id="classes">
       <h2>НАПРАВЛЕНИЯ</h2>
       <p class="classes-sub">Каждая тренировка делает тебя лучше!</p>
       <div class="classes-wrap">
@@ -90,10 +97,10 @@
          <p>Старт: каждый месяц, всего 10 мест.</p> 
       </div>
       <div class="video-right">
-         <iframe src="https://vk.com/video_ext.php?oid=-10881523&id=456239019&hash=55558ac12d84d530&hd=1" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+         <iframe class="video-frame" src="https://vk.com/video_ext.php?oid=-10881523&id=456239019&hash=55558ac12d84d530&hd=1"  frameborder="0" allowfullscreen></iframe>
       </div>
    </div>
-   <div class="services wrap">
+   <div class="services wrap" id="services">
       <h2>Вы нашли то, что искали</h2>
       <div class="services-wrap">
          <div class="services-block">
@@ -140,13 +147,13 @@
          </div>
       </div>
    </div>
-   <div class="timetable wrap">
+   <div class="timetable wrap" id="timetable">
       <h2>РАСПИСАНИЕ</h2>
       <div class="tametable-img">
          <img class="picture" src="./img/timetable.jpg" alt="">
       </div>
    </div>
-   <div class="subscription wrap">
+   <div class="subscription wrap" id="subscription">
       <h2>Выберите абонемент</h2>
       <p class="subscription-text">Длительность занятия - 60 минут.</p>
       <p class="subscription-text">Стоимость разового занятия - 700 руб.</p>
@@ -185,7 +192,7 @@
          </div>
       </div>
    </div>
-   <div class="faq wrap">
+   <div class="faq wrap" id="faq">
       <h2>FAQ</h2>
       <p class="faq-text">Найди ответ на свой вопрос!</p>
       <p class="faq-text">Или задай свой +380975827477.</p>
@@ -210,7 +217,7 @@
          </div>
       </div>
    </div>
-   <div class="contacts">
+   <div class="contacts" id="contacts">
       <div class="address">
          <p>Студия FOXY LADY</p>
          <p>Набережная Ленина, 10</p>
@@ -221,7 +228,7 @@
          </div>
       </div>
       <div class="map">
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.0111238600994!2d35.03397091523984!3d48.47550023554398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2f1774992a5%3A0x8592b4eb8f6d9cd2!2z0YPQuy4g0KHQtdGH0LXRgdC70LDQstGB0LrQsNGPINCd0LDQsdC10YDQtdC20L3QsNGPLCAxMCwg0JTQvdC40L_RgNC-LCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDQ5MDAw!5e0!3m2!1sru!2snz!4v1583382321863!5m2!1sru!2snz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+         <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.0111238600994!2d35.03397091523984!3d48.47550023554398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2f1774992a5%3A0x8592b4eb8f6d9cd2!2z0YPQuy4g0KHQtdGH0LXRgdC70LDQstGB0LrQsNGPINCd0LDQsdC10YDQtdC20L3QsNGPLCAxMCwg0JTQvdC40L_RgNC-LCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDQ5MDAw!5e0!3m2!1sru!2snz!4v1583382321863!5m2!1sru!2snz"  frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
    </div>
    <footer class="wrap">
@@ -232,6 +239,7 @@
          <a class="icon" href="https://vk.com/foxyladyds?w=address-10881523" target="_blank"><img src="./img/vk.png" alt="vkontakte"></a>
       </div>
    </footer>
-   
+   <div class="scroll_top"></div>
+   <script src="./script.js"></script>
 </body>
 </html>
