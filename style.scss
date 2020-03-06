@@ -1,4 +1,7 @@
 $white: #fff;
+$grey: #E9EBEE;
+$black: #504a4c;
+$orange: #F3933D;
 
 body, html{
    padding: 0;
@@ -14,6 +17,9 @@ a{
    color: $white;
    text-decoration: none;
 }
+a:hover{
+   color: $orange;
+}
 h1{
    font-size: 5rem;
    letter-spacing: 3px;
@@ -26,10 +32,20 @@ h3{
    font-size: 2rem;
    line-height: 1.5;
 }
+h4{
+   font-size: 1.2rem;
+}
 nav{
-   background:#504a4c;
+   background: $black;
    padding: 30px;
    text-align: right;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.logo{
+   width: 70px;
+   height: auto;
 }
 .item{
    padding: 20px;
@@ -48,14 +64,14 @@ nav{
 .subtitle{
    font-size: 2rem;
 }
-.left{
+.prev{
    width: 30px;
    height: 30px;
    position: absolute;
    left: 30px;
    top: calc(50% - 15px);
 }
-.right{
+.next{
    width: 30px;
    height: 30px;
    position: absolute;
@@ -66,9 +82,28 @@ nav{
    width: 100%;
    height: auto;
 }
-
+.wrap{
+   padding: 30px 50px;
+}
+.button{
+   background-color: $orange;
+   border: 3px solid $orange;
+   border-radius: 5px;
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+   padding: 10px 20px;
+   font-size: 1.1rem;
+   color: $white;
+   letter-spacing: 2px;
+}
+.button:hover{
+   transition: all .5s ease-in-out;
+   background-color: $white;
+   color: $orange
+}
+.btn{
+   margin: 50px 0;
+}
 .classes{
-   padding: 50px;
    h2{
       text-align: center;
    }
@@ -88,7 +123,7 @@ nav{
 }
 .video-block{
    display: flex;
-   padding: 0 50px;
+   background: $grey;
 }
 .video-left{
    flex-grow: 1;
@@ -98,21 +133,120 @@ nav{
 .video-right{
    flex-grow: 1;
    margin-top: 40px;
+   padding: 0 20px;
 }
-.found{
-   padding: 50px;
+.services{
    h2{
       text-align: center;
    }
 }
-.found-wrap{
+.services-wrap{
    display: grid;
    grid-template-columns: repeat(3, 1fr);
 }
-.found-block{
+.services-block{
    padding: 30px;
 }
-.found-img{
+.services-img{
    width: 64px;
    height: auto;
+}
+.timetable{
+   text-align: center;
+}
+.tametable-img{
+   padding: 0 20px;
+}
+.subscription{
+   text-align: center;
+   background: $grey;
+}
+.subscription-text{
+   font-size: 1.2rem;
+}
+.subscription-wrap{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   margin-top: 60px;
+}
+.card{
+   background: $white;
+   border: 1px solid #e0e6ed; 
+   border-radius: 9px;
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+   text-align: center;
+   padding: 40px 20px;
+   margin: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.card-body{
+   padding: 40px 0;
+}
+.card-text{
+   line-height: 2;
+}
+.card-price{
+   font-size: 3rem;
+   font-weight: 700;
+   margin: 30px 0;
+}
+.faq{
+   text-align: center;
+}
+.faq-text{
+   font-size: 1.2rem;
+}
+.faq-wrap{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+}
+.faq-block{
+   border: 1px solid #e0e6ed; 
+   border-radius: 9px;
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+   text-align: left;
+   padding: 40px 30px;
+   margin: 20px;
+   display: flex;
+   flex-direction: column;
+   h4{
+      line-height: 1.8;
+      text-align: center;
+   }
+}
+.faq-block-text{
+   line-height: 2;
+   text-align: left;
+}
+.contacts{
+   background: $grey;
+   padding: 50px;
+   display: flex;
+   font-size: 1.3rem;
+}
+.address,
+.map{
+   padding: 0 20px;
+   flex-grow: 1;
+}
+.tel{
+   color: #000;
+}
+footer{
+   background: $black;
+   color: $white;
+   font-size: 1.5rem;
+   font-weight: 700;
+   letter-spacing: 2px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.orange{
+   color: $orange;
+}
+.icon{
+   margin: 0 5px;
 }
