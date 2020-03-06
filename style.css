@@ -41,7 +41,7 @@ h4 {
 
 nav {
   background: #504a4c;
-  padding: 30px;
+  padding: 10px 30px;
   text-align: right;
   display: flex;
   justify-content: space-between;
@@ -136,18 +136,24 @@ nav {
 
 .slider {
   position: relative;
+  width: 100vw;
+  height: calc(100vw / 1.8);
 }
 
 .slide {
-  background: url(./img/slide1.png) no-repeat top center;
-  background-size: cover;
-  color: #fff;
-  text-align: center;
-  padding: 100px;
+  position: absolute;
+  display: none;
+  width: 100vw;
+  height: calc(100vw / 1.8);
+}
+
+.shown {
+  display: block;
 }
 
 .subtitle {
   font-size: 2rem;
+  z-index: 3;
 }
 
 .prev {
@@ -156,6 +162,7 @@ nav {
   position: absolute;
   left: 30px;
   top: calc(50% - 15px);
+  z-index: 5;
 }
 
 .next {
@@ -164,6 +171,7 @@ nav {
   position: absolute;
   right: 30px;
   top: calc(50% - 15px);
+  z-index: 5;
 }
 
 .picture {

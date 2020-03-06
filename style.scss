@@ -2,6 +2,7 @@ $white: #fff;
 $grey: #E9EBEE;
 $black: #504a4c;
 $orange: #F3933D;
+$width: 100vw;
 
 body, html{
    padding: 0;
@@ -37,7 +38,7 @@ h4{
 }
 nav{
    background: $black;
-   padding: 30px;
+   padding: 10px 30px;
    text-align: right;
    display: flex;
    justify-content: space-between;
@@ -125,16 +126,21 @@ nav{
 }
 .slider{
    position: relative;
+   width: $width;
+   height: calc(#{$width} / 1.8);
 }
 .slide{
-   background: url(./img/slide1.png) no-repeat top center;
-   background-size: cover;
-   color: $white;
-   text-align: center;
-   padding: 100px;
+   position: absolute;
+   display: none;
+   width: $width;
+   height: calc(#{$width} / 1.8);
+}
+.shown{
+   display: block;
 }
 .subtitle{
    font-size: 2rem;
+   z-index: 3;
 }
 .prev{
    width: 30px;
@@ -142,6 +148,7 @@ nav{
    position: absolute;
    left: 30px;
    top: calc(50% - 15px);
+   z-index: 5;
 }
 .next{
    width: 30px;
@@ -149,6 +156,7 @@ nav{
    position: absolute;
    right: 30px;
    top: calc(50% - 15px);
+   z-index: 5;
 }
 .picture{
    width: 100%;
