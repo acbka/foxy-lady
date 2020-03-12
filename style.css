@@ -156,24 +156,22 @@ nav {
   z-index: 3;
 }
 
-.prev {
+.prev,
+.next {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: 30px;
   top: calc(50% - 15px);
   z-index: 5;
   cursor: pointer;
 }
 
+.prev {
+  left: 30px;
+}
+
 .next {
-  width: 30px;
-  height: 30px;
-  position: absolute;
   right: 30px;
-  top: calc(50% - 15px);
-  z-index: 5;
-  cursor: pointer;
 }
 
 .picture {
@@ -322,6 +320,84 @@ nav {
   margin: 30px 0;
 }
 
+.gallery h2 {
+  text-align: center;
+}
+
+.gallery-wrap {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+}
+
+.gallery-img {
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(252, 251, 249, 0.9);
+}
+
+.gallery-popup {
+  position: fixed;
+  top: 10px;
+  left: calc((100vw - 600px) / 2);
+  width: calc(100vw - 200px);
+  height: calc(100vw - 200px);
+  max-width: 600px;
+  max-height: 600px;
+  display: none;
+  border: 5px solid white;
+}
+
+.left,
+.right {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  z-index: 15;
+  cursor: pointer;
+}
+
+.left {
+  left: 30px;
+}
+
+.right {
+  right: 30px;
+}
+
+.close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 15;
+}
+
+.popup-img {
+  display: none;
+  position: absolute;
+}
+
+.visible {
+  display: block;
+}
+
+.pop-show {
+  display: block;
+}
+
 .faq {
   text-align: center;
 }
@@ -435,6 +511,7 @@ footer {
   outline: none;
 }
 
+/*   media */
 @media screen and (max-width: 1200px) {
   .wrap {
     padding: 40px 20px;
@@ -536,6 +613,31 @@ footer {
 
   .subscription-wrap {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-popup {
+    left: calc((100vw - (100vw - 100px)) / 2);
+    width: calc(100vw - 100px);
+    height: calc(100vw - 100px);
+  }
+
+  .left {
+    left: 15px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .right {
+    right: 15px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .close {
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
   }
 }
 

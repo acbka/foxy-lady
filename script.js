@@ -157,7 +157,85 @@ function slider() {
       current.classList.add("shown");
    }
 
-   setInterval(right,5000);
+   slide.forEach(item => {
+      item.addEventListener("mouseover", function(){
+         clearInterval(timer);
+      })
+   })
+   
+   slide.forEach(item => {
+      item.addEventListener("mouseout", function(){
+         timer = setInterval(right,5000);
+      })
+   })
+
+
+}
+
+// gallery
+
+function gallery(){
+   let previews = Array.from(document.querySelectorAll(".gallery-img"));
+   let images = Array.from(document.querySelectorAll(".popup-img"));
+   let numberOfImages = images.length;
+   let overlay = document.querySelector(".overlay");
+   let index;
+   let current;
+
+   previews.forEach(preview => {
+      preview.addEventListener("click", show);
+
+      function show(){
+         index = previews.indexOf(preview);
+
+         overlay.classList.add("visible");
+         document.querySelector(".gallery-popup").classList.add("visible");
+
+         current = images[index];
+         current.classList.add("pop-show"); 
+      }
+   })
+
+   
+
+   document.querySelector(".right").addEventListener("click", moveRight);
+
+   function moveRight(){
+      current.classList.remove("pop-show");
+
+      if (index == numberOfImages-1) {
+         index = 0;
+      } else {
+         index = index + 1;
+      }
+
+      current = images[index];
+      current.classList.add("pop-show");
+   }
+
+   document.querySelector(".left").addEventListener("click", moveLeft);
+
+   function moveLeft(){
+      current.classList.remove("pop-show");
+
+      if (index == 0) {
+         index = numberOfImages-1;
+      } else {
+         index = index - 1;
+      }
+
+      current = images[index];
+      current.classList.add("pop-show");
+   }
+
+   overlay.addEventListener("click", close);
+   document.querySelector(".close").addEventListener("click", close);
+
+   function close(){
+      overlay.classList.remove("visible");
+      document.querySelector(".gallery-popup").classList.remove("visible");
+      document.querySelector(".pop-show").classList.remove("pop-show")
+   }
 }
 
 
@@ -168,3 +246,4 @@ activeMenuItem()
 scrollPage()
 goToTop()
 slider()
+gallery()
