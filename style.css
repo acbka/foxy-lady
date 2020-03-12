@@ -480,8 +480,6 @@ footer {
   width: 55px;
   height: 55px;
   border: none;
-  border-radius: 50%;
-  background: #504a4c;
   z-index: 100;
   outline: none;
   cursor: pointer;
@@ -490,10 +488,10 @@ footer {
 
 .scroll_top:after {
   content: "";
-  width: 15px;
-  height: 15px;
-  border-top: 3px solid #F3933D;
-  border-left: 3px solid #F3933D;
+  width: 25px;
+  height: 25px;
+  border-top: 6px solid #F3933D;
+  border-left: 6px solid #F3933D;
   transform: rotate(45deg);
   position: absolute;
   top: 7px;
